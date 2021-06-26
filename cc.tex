@@ -1,1 +1,1645 @@
-qzfqze
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm,bottom=2.5cm}
+\usepackage{tocloft}
+\showoutput
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pmboxdraw}
+\usepackage[thinlines]{easytable}
+\usepackage{outlines}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\renewcommand{\baselinestretch}{1.5}
+\begin{document}
+
+
+\newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt} \item[-] #1}
+}
+
+
+
+\renewcommand{\contentsname}{Table of contents}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\section*{\centering Acknowledgment}
+This work might not have been complete without the remarkable help, support and encouragement from many wonderful people for whom we are truly thankful.
+First and foremost, we are extremely grateful to our supervisor.
+Mrs. Dalel Bourkhis, for her insightful feedback and invaluable suggestions during the writing
+process. We would like to express our whole-hearted appreciation to her for the professional guidance, tremendous support, and continuous encouragement throughout our work on this project.
+Mrs. Bourkhis served not only as our academic supervisor, but also as a friend
+who shared her time and professionalism. We have been fortunate to have her continuous support and inestimable kindness.
+We are also grateful for the wonderful help and support from our professional supervisor Mr. ali Megbli and all faculty members.
+Staff and graduate students in the IT Department at Higher Institute of Technologies Studies. They have been a source of inspiration throughout our academic journey.
+\pagebreak
+
+\section*{\centering Dedication}
+\paragraph{\normalfont I dedicate this dissertation to:\newline}
+My sweet mother, Sihem, whose affection, love, encouragement, and prayers, day and night, have helped me succeed literally, world.
+To my father, peace upon his soul, who has always dreamt about my graduation day from my first day at school, I am so proud that I reached what you want me to reach.
+To my brother, you are my hero, all my words can’t describe how much I respect you, you’ve been the one who took care of the family even if it takes you to leave your studies and sacrifice all your dreams just to afford a better life for us.
+My sisters, thanks for everything you’ve done for me, for being my side of every single trouble that I’ve had.
+A very special thanks to all my family members, thanks to everyone who helped me to be what I am today. {\tiny Nabil Krissane}
+
+
+\paragraph{\normalfont I dedicate this dissertation to:\newline}
+My dear parents, Hajer and Mohamed Hocine.
+Your love and unceasing support are the reason of what has come of me. I don’t know where I
+would be without you.You are the beacon of my life.
+My Brother Ayoub
+You’ve always been my life's guide, teaching me through your experience and helped me in every single problem I’ve got.
+My sisters, Khansa and Amira.
+Your support in my hard times, always there for me. I love you both.
+To the soul of my uncle Boubaker Boukhachem.
+I am truly grateful for having you in my life, peace upon your soul.
+My soul mate, Sarra Chihi...
+It's been always a matter of ''HOW'', always been there for me, no matter what. You've been my back-wall that makes me up every second. I love you
+My Friends and comrades.
+Thanks beyond measure. {\tiny Oussama Boukhachem}
+
+\pagebreak
+
+
+
+
+
+
+\tableofcontents
+
+\pagebreak
+
+\listoffigures
+\pagebreak
+\listoftables
+\pagebreak
+
+\section{Introduction}
+
+\paragraph{\normalfont “My life has changed. I mean, it was already difficult. But now my life is even harder,”~\cite{one}. This is what we’ve choose to star introducing our project. In the last two years, the entire world woke up on a disaster. New virus got viral on worldwide causing more than 3.37M death and more than 163M cases which made people living hard times. The economic fallout of the novel coronavirus has affected almost every major industry sector of Tunisia. More than 1.3 million people in the country have filed first-time jobless benefit claims.}
+\paragraph{\normalfont Given the economic crises facing many countries amid the coronavirus pandemic (COVID-19), significant impacts on labor market outcomes are expected. While pandemics differ, they invariably affect economic output. The Black Death of 1347-1352 caused more than 75 million deaths around the world, devastating many urban areas, with fewer deaths in rural areas. That led to a reduction in available labor thereby increasing agricultural wages. The Spanish Flu of 1918-1920 caused the deaths of up to 100 million people and curtailed economic activity, with impacts that could be traced into the 1980s.}
+\paragraph{\normalfont However, if we compare coronavirus total deaths, it will look for a while that it’s a minor pandemic. But the true is that COVID-19 will lead to job losses, lower incomes, and increased poverty. The direct impacts, however, can lead to other short- and medium-term effects that could prove just as painful in the longer run. For instance, job losses affect future earnings due to interruptions, lost productivity; de-skilling associated with prolonged unemployment spells, and missed opportunities to build human capital on the job. }
+\paragraph{\normalfont By day wage workers, we mean workers who work in different categories such as contract workers, casual workers and daily wage workers for completing jobs on an hourly / day / week /unit / quantity basis. According to the Apprenticeship Act of 1961, "worker means any person who is employed for a salary in any kind of work and who receives pay directly from the employer, but does not include an apprentice".}
+\paragraph{\normalfont \normalfont Asked how the lockdown-induced economic crisis affected the lives-livelihoods of daily wage workers~\cite{one}, in his early 20s in Tataouine said, “Since the time of Covid and the lockdown, there has been a severe crisis of employment opportunities in local labor markets. Getting work for even two days in a week is excruciatingly difficult for us. Daily wages too, for any work possible, have dipped by half.”}
+\paragraph{\normalfont ~\cite{one} struggling to make ends meet for his own family, amidst dwindling prospects for work, reflects the nature and form of the catastrophe that has surfaced since the imposition a year ago of the curfew-style lockdown that sucked out employment opportunities for Tataouine’s daily workers in both the unorganized and organized segments.}
+\paragraph{ \normalfont If we come through the modern “job find” platforms, they are actually dedicated to those who had CVs, and those who are looking for a employment contract. So these platforms are not dedicated to daily wage workers. \textbf{And ‘we’ as students took all this suffering to make something really matters!}
+}
+\paragraph{\normalfont Under the authority of the superior institute of technology studies, and the academical supervision of M. Dalel Bourkhis - With an internship in InnevLabs Company and under the professional supervision
+Of Mr. Ali Megbli - With God’s will and our teachers knowledge transferring during 3 years of education in this institute, We’ve developed Servise19 as an end o studies project in order to accomplish our license of IT System development on the educational year 2020-2021.}
+
+\chapter{General Presentation}
+\renewcommand{\thesection}{\arabic{section}}
+\setcounter{secnumdepth}{3}
+
+
+\section*{Introduction}
+
+Introduction for General Presentation
+
+
+
+
+
+
+
+
+
+
+\section{Presentation of InnevLabs company}
+Innevlabs is the innovation laboratory.
+in development areas,
+Communication and Training.
+The Agency offers its Three Structures:
+Innev Dev, Innev Comm and Innev Forma, to meet the needs of customers and partners.
+Started on 2017, Innevlabs serves many clients with many excellent reviews and feedbacks.
+\textbf{CEO}  Mr Ali megbli \newline
+\textbf{Owner} Mr Ahmed Lanouar (peace upon his soul)\newline 
+
+
+\textbf{Location} Sousse, Tunisia.
+
+
+
+\section{Project General Presentation}
+"With great power comes great responsibility".
+And in our case the power is the IT Knowledge, all the stats above encourage us to aim our end of university studies project to those labors. With greatest technologies in the markets and latest, we'll introduce our "New job seeking concept".
+
+\subsection{Project Description}
+The global economy has contracted significantly due to the COVID-19 pandemic. During the second quarter of 2020, the U.S. economy dropped 35\% compared to the same period of time last year ( 1 Reinicke, 2020~\cite{one}), and the Euro zone economy decreased by 12.1\% on average compared to the first quarter of the year. Spain experienced the largest drop at 18.5\% ( 2 Amaro, 2020~\cite{two}). These countries have a federal reserve, which can handle the economic re-enhancement. But its not the case for Tunisia, which is an under-development country. With 76\% ( 3 ref organization,2021) economical drop and 61\% ( 3 erf organization,2021~\cite{three}) trade balance deficit, labors and workers can't handle that much failure.
+These financial hardships prove the deficit of the government to take real decisions taking the laborers and employers to the survival land.\newline
+Servise19  a cross-platform, service provider profile marketing application. Allowing those who don't know how to profit these huge internet opportunities. We've created a simple way to survive labors' services during this hard covid19 time.\newline
+
+Exactly! The name is a significant of the problem.
+
+As a logo we’ve tried to create something mean full, remarkable and easy branded:
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics{pictures/logo (1).PNG}
+    \caption{Servise19 Logo}
+    \label{fig:Servise19Logo}
+\end{figure}
+\pagebreak
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics{pictures/icon (2).png}
+    \caption{Servise19 icon}
+    \label{fig:Servise19icon}
+\end{figure}
+
+
+
+
+
+This project is hosted on VPS (virtual private server) with a domain name :
+
+www.servise19.ml
+
+
+
+
+\subsection{Project Objectives}
+
+
+
+
+In order to make self marketing and profit internet opportunities easy to workers, self-employment people, and daily wage labors \newline
+
+\section{Application architecture}
+\subsection{Software architecture}
+The Model-View-Controller (MVC) is an architectural pattern that separates an application into three main logical components: the model, the view, and the controller. Each of these components is built to handle specific development aspects of an application. MVC is one of the most frequently used industry-standard web development frameworks to create scalable and extensible projects.\newline
+
+The MVC model is made up of the following three parts:
+\begin{itemize}
+  \item Model: The Model component corresponds to all the data-related logic that the user works with. This can represent either the data that is being transferred between the View and Controller components or any other business logic-related data. For example, a Customer object will retrieve the customer information from the database, manipulate it and update it data back to the database or use it to render data.
+  \item View: The View component is used for all the UI logic of the application. For example, the Customer view will include all the UI components such as text boxes, drop downs, etc. that the final user interacts with.
+  \item Controller: Controllers act as an interface between Model and View components to process all the business logic and incoming requests, manipulate data using the Model component and interact with the Views to render the final output. For example, the Customer controller will handle all the interactions and inputs from the Customer View and update the database using the Customer Model. The same controller will be used to view the Customer data.
+  %\\[2\baselineskip]
+\end{itemize}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=10cm, height=5cm]{pictures/MVC-Design-Pattern.png}
+    \caption{MVC Architecture}
+    \label{fig:mvc}
+\end{figure}
+\pagebreak
+\subsection{Physical architecture}
+Almost the hardest part is the Physical architecture. We've tried to combine 
+
+ between Cloud and normal "3 tier" architecture as explained below.
+We gave it "Unlimited sync" as a name, which is the best significant we could found.
+
+Starting with the Smartphone part (red colored):
+
+1- Data collected and sent from inputs to the Dart engine.
+
+2- Dart engine create a temporary copy into SQLite (automatically).
+
+3- Dart start sending data from the SQLite to the Firebase cloud firestore.
+
+4- Firebase cloud firestore, store data and sync it, check if duplicated and then send a respond back to .
+
+5- Dart shows the respond in Flutter interface.               
+
+On the web site, it’s quite bit different (green colored):
+
+1- Simple MVC data interaction
+
+2- With every interaction Laravel 8 gave a command to the server to send data and sync it with Firebase cloud firestore.
+
+3- Server took a respond from Firebase cloud firestore and deliver it to Laravel 8.
+
+And then Laravel 8 do a Simple MVC data interaction to inset the respond in the SQL database.
+\begin{figure}
+    \centering
+    \includegraphics{pictures/architecture.jpg}
+    \caption{Detailed Architecture}
+    \label{fig:detailedachitecture}
+\end{figure}
+\pagebreak
+\subsubsection{3 tier architecture}
+3 tier architecture is a pattern used for a completely different reason. It separates the entire application into meaningful "groups": UI, Business Logic, Data Storage. So 3 tier application refers to all code in the application. The MVC pattern is a pattern used in the UI tier as shown in Figure (\ref{fig:tier}).
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/3-tiers-standard.png}
+    \caption{3 tier architecture}
+    \label{fig:tier}
+\end{figure}
+\pagebreak
+\section{Application Life Cycle}
+
+
+Application Life cycle Management (ALM) is the specification, design, development, and testing of a software application. ALM covers the entire life cycle from the idea conception, through to the development, testing, deployment, support, and ultimately retirement of systems as shown in Figure (\ref{fig:applifecycle}).
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=15cm, height=7cm]{pictures/lifecycle.png}
+    \caption{Application Life Cycle}
+    \label{fig:applifecycle}
+\end{figure}
+\subsection{Waterfall model (CASCADE)}
+The waterfall model is a breakdown of project activities into linear sequential phases, where each phase depends on the deliverable of the previous one and corresponds to a specialisation of tasks. The approach is typical for certain areas of engineering design. In software development, it tends to be among the less iterative and flexible approaches, as progress flows in largely one direction ("downwards" like a waterfall) through the phases of conception, initiation, analysis, design, construction, testing, deployment and maintenance.
+The waterfall development model originated in the manufacturing and construction industries; where the highly structured physical environments meant that design changes became prohibitively expensive much sooner in the development process. When first adopted for software development, there were no recognised alternatives for knowledge-based creative work.
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/waterfall-model.png}
+    \caption{Waterfall model}
+    \label{fig:waterfallmodel}
+\end{figure}
+
+
+"Servise19" in terms of technologies, it was a great combination from all innovent platforms and technologies.
+Last and not least there's not a perfect system in this world, but the way Servise19 was built makes us proud for getting all the knowledge we've learned across our education program melted on new frameworks that really matter on the flexibility and security sides.
+\chapter{Analysis and Requirement}
+\renewcommand{\thesection}{\arabic{section}}
+\section*{Introduction}
+As students, we've done research and knocked doors to get more information about the labours industry.
+So far from the normal statistics, below we will list many exclusive numbers that might not have been announced yet.
+We took advantage of the few inspirations available on the internet also, so we could make something better.
+
+\section{Study of the existing system}
+There are not really many platforms that serve this whole idea. As we all know, there are indeed plenty of job-seeking platforms. These platforms probably look the same, in terms of functionalities and user UI/UX.
+We'll take TANITJOBS as an example of a job-seeking platform.
+It's a Tunisian platform that allows companies to post job offers, and users to submit on those offers. The problem here is that:\newline
+1- UI/UX is so complicated, many buttons and too much unneeded functionalities.\newline
+2- Simple MVC architecture not backed up with sync strategy.
+Besides all listed problems, this type of platform (which the web is full of) did not fit the daily wage workers.
+They don't have a CV, regular time or even the patience to face life's troubles.
+\subsection{Problematic study}
+Daily wage workers, those who work outside of the company or who work irregularly were particularly hard hit by the pandemic. Due to the different timing of the second wave reactions, Tunisia imposed many additional restrictions in October that almost took all the people to hunger.
+With 34\% of total workers (employees) a percentage of 79 of them was literally fighting hunger.\newline
+So to sum up the problems that faced daily wage workers:\newline
+1- The laborers can't go to the place that used to find clients in, of course due to the curfew.\newline
+2- Most laborers are that much in terms of understanding the complex UI/UX that 90\% of platforms use it.
+\section{Proposed solutions}
+Our solution is a profile marketing platform, unlike online job portals, with a new method that fits with Handy Service providers and Freelancers needs. So they can make a living during this hard time.
+Going even much further, this solution will have a simple UI/UX and essential functionalities. So making it simple is the best way to convince both workers and clients using it.
+To make it easy this check-list summing all specification of needs:\newline
+- Easy to use \newline
+- Allow workers to find a job without going outside and maybe breaking rules.\newline
+- Allow clients to find the perfect match between workers and the mission they got.\newline
+- Give the both types of users the ability to chat and discuss missions before going on person -to -person meeting.\newline
+- Giving a review to workers so the good one will have more clients and encourage others to do a perfect job.
+
+\section{Specification of needs}
+Doing our best in this section, to focus on the technical keywords. Like that we will make it easy for people in IT field to understand the way that the platform will be.
+\subsection{Functional needs}
+Survise-19 let service providers to:
+\begin{itemize}
+ \item Manage Account:
+   \SubItem{ Create a profile (Full name, Service description, Phone number,
+Picture ...).}
+  \SubItem {Set the availability status.}
+  \SubItem {Set an Hourly or a Daily price.}
+  \SubItem {Choose availability location (MAPS).}
+  \SubItem {Share their services portfolio via GALLERY system.}
+  \SubItem {Create a CLIENT account.}
+ \item Manage Company
+  \SubItem{Company owners can post job applications to the service
+providers, and also can select service providers by category.}
+ \item Consult worker and company profiles
+   \SubItem{Choose the right Service provider via EXPLORER system.}
+   \SubItem{Rate and view reputation of service providers.}
+   \pagebreak
+  \item Manage Form
+   \SubItem{Access to a forum area that allows all users to share experiences
+and problems.}
+  \item Manage Message
+  \SubItem{Directly discuss service's details with clients via a CHAT system.}
+  \item Manage Posts
+  \SubItem{Add a post in the forum in order to search about worker or tell peoples about the troubles you have}
+  \item Manage Comment
+  \SubItem{Add a comment to help people who have troubles}
+  \item Manage Project
+  \SubItem{Manage project by adding,modifying,deleting projects}
+   
+  
+   
+
+
+\end{itemize}
+\subsection{Non-functional needs}
+\begin{itemize}
+  \item Smooth UI: which means that the app has a smooth design with unlaggy animations.
+  \item Fast Performance: which means that the app is smooth and fast on every phone. Also, the website has a very short access time thanks to the powerful server.
+  \item Well Secured: the user has no anxiety about his account security because we take care about that also take care of his privacy.
+  \item Responsive Design: the app and the website are compatible with any screen size thanks to the responsive design.
+  \item Multi-platform APP:in order to provide our app to the most amount of people, we took into consideration the variety of operating systems that is why Servise19-19 is available in 3 versions. Web, Android, and IOS.
+
+
+\setcounter{secnumdepth}{3}
+\end{itemize}
+
+
+\section*{Conclusion}
+Pushing our platform to fit all these needs is the best way to ensure the reliability and the flexibility. Nowadays even small details can make a huge difference in the IT world.
+We really hope that all mentioned informations are clear so others can take advantage of this study.
+\chapter{Conceptual Study}
+\renewcommand{\thesection}{\arabic{section}}
+\section*{Introduction}
+In this chapter, we are interested in the needs analysis, of which we first identify the actors of our application, then we identify the functional needs and the non-functional needs. Then, we are going to present in detail the app using different diagrams such as use case diagram, activity diagram, sequence diagram...
+
+\setcounter{secnumdepth}{3}
+\section{Design methodology UML}
+\subsection*{Definition}
+The Unified Modeling Language (UML) is a general-purpose, developmental, modeling language in the field of software engineering that is intended to provide a standard way to visualize the design of a system.\newline
+
+The creation of UML was originally motivated by the desire to standardize the disparate national systems and approaches to software design. It was developed at Rational Software in 1994–1995, with further development led by them through 1996.
+\subsection*{Use Case Diagram}
+A use case diagram is a graphical depiction of a user's possible interactions with a system. A use case diagram shows various use cases and different types of users the system has and will often be accompanied by other types of diagrams as well. The use cases are represented by either circles or ellipses.
+\subsection*{Class Diagram}
+The class diagram is the main building block of object-oriented modeling. It is used for general conceptual modeling of the structure of the application, and for detailed modeling, translating the models into programming code. Class diagrams can also be used for data modeling. The classes in a class diagram represent both the main elements, interactions in the application, and the classes to be programmed.
+\subsection*{Activity Diagram}
+An activity diagram is a behavioral diagram i.e. it depicts the behavior of a system. An activity diagram portrays the control flow from a start point to a finish point showing the various decision paths that exist while the activity is being executed
+\subsection*{Sequence Diagram}
+A sequence diagram shows object interactions arranged in time sequence. It depicts the objects involved in the scenario and the sequence of messages exchanged between the objects needed to carry out the functionality of the scenario.
+
+\pagebreak
+\section{Detailed Conceptual}
+
+\subsection{Identification of use cases}
+
+The list below clarify the various use cases in the app
+
+\begin{itemize}
+    \item Consult worker and company profiles: In this section use user is able to consult the profiles of workers and companies also he can consult other various information such as availability, price, unit price, location...
+    \item Manage Company: This section is specified to companies that looking for workers. The company's account is editable just like others with more settings.
+    \item Manage Worker: This section is specified to workers. Every worker has a lot of features such as adding project samples to use in order to increase the job opportunities regardless of the basic options of editing account, adding and deleting data.
+    \item Manage worker's projects: This use case is concerned only with workers who want to increase their job opportunities. Basically, it allows the workers to manage their project sample by adding, modifying, deleting a project.
+    \item Manage Message: Every authenticated user can send and receive messages with other users instantly.
+    \item Manage Forum: Every authenticated user can add a post in the form and other users add comments to the post.
+    \item Manage Account: Which means every authenticated user is able to alter his own profile's data.
+    \item Authenticate: this use case allows the users to access their accounts.
+    \item Send a report: this use case is dedicated to every use even if its not authenticated. It allows them to send a report to the admin.
+    \item Register: It allows the new users to create new accounts according to their current situations.
+\end{itemize}
+\pagebreak
+\subsection{Use Case Diagram}
+
+
+\subsubsection*{Schematic of General Use Case Diagram}
+As you see below in figure (\ref{fig:usecasediagram}) the actor can do a bunch of actions during the usage of the app.
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=18cm, height=20cm]{pictures/usecase.png}
+    \caption{Global Use Case Diagram}
+    \label{fig:usecasediagram}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+\pagebreak
+\subsubsection{Use Case: Authentication}
+The figure (\ref{fig:auth}) below clarifies authentication use case
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/authenticate usecase.jpg}
+    \caption{Use Case: Authentication}
+    \label{fig:auth}
+
+\end{figure}
+
+\begin{table}[!htbp]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{Identification Summary}                   \\ \hline
+
+Title                         & Authenticate                            \\ \hline
+Object                        & Authentication and access authorization                              \\ \hline
+Abstract                      & The user enter his login and password on order to access to the home page                                \\ \hline
+Actor                         & Worker,Company,Admin,Visitor                             \\ \hline
+ 
+Preconditions                 & The user must have an account                \\ \hline
+Post Conditions & The user access to his account \\ \hline
+\multicolumn{2}{|l|}{Nominal Scenario:Authenticate }                   \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}
+\textbullet The user enters his login and password\\ 
+\textbullet The system verifies the existence of the user\\
+\textbullet If the user is identified, the system displays the home interface
+
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{Exception Scenario:Authenticate}                       \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}
+
+\textbullet The system couldn't identify the user\\ 
+\textbullet An error message appears\\ 
+\end{tabular}} \\ \hline
+
+
+
+\end{tabular}%
+
+}
+\caption{Authentication Use Case Scenario}
+\label{tab:authusecase}
+\end{table}
+\newpage
+
+
+\subsubsection{Use Case: Register}
+The figure (\ref{fig:registerusecase}) below clarifies register use case
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/registerusecase.png}
+    \caption{Use Case: Register}
+    \label{fig:registerusecase}
+\end{figure}
+
+
+
+\begin{table}[!htbp]
+\centering
+
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{Identification Summary}                   \\ \hline
+Title                         & Register                         \\ \hline
+Object                        & Register        \\ \hline
+Abstract                      & Create a new account                              \\ \hline
+Actor                         & Worker,Company,Admin,Visitor                             \\ \hline
+ 
+
+\multicolumn{2}{|l|}{Nominal Scenario}                   \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}
+\textbullet The user fill the register form\\ 
+\textbullet The system verify the info\\
+\textbullet The system creates new account\\
+\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{Exception Scenario}                       \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}
+\textbullet The system notifies that the changes are invalid\\ 
+\textbullet An error message appears\\ 
+\end{tabular}} \\ \hline
+\end{tabular}
+\caption{Register Use Case Scenario}
+\label{tab:registerusecase}
+\end{table}
+
+\pagebreak
+%added the rest of use cases here%
+\subsubsection{Use Case: Manage Company}
+The figure (\ref{fig:ManageCompany}) below clarifies Manage Company use case
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/manage companyusecase.png}
+    \caption{Use Case: Manage Company}
+    \label{fig:ManageCompany}
+\end{figure}
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|c|}{Identification Summary}       \\ \hline
+Title          & Manage Company                    \\ \hline
+Object         & Company Management                \\ \hline
+Abstract       & The ability of manage companies   \\ \hline
+Actor          & Company,Admin                          \\ \hline
+Preconditions  & The company must have an account  \\ \hline
+Post Condition & The company access to his account \\ \hline
+\multicolumn{2}{|l|}{Nominal Scenario: Modify company}              \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The company modifies the data\\ \textbullet The system verifies the new data\\ \textbullet The system updates the new data\end{tabular}} \\ \hline
+
+\multicolumn{2}{|l|}{Nominal Scenario: Add company}              \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The company enters the data\\ \textbullet The system verifies the entered data\\ \textbullet The system add the new company\end{tabular}} \\ \hline
+
+\multicolumn{2}{|l|}{Nominal Scenario: Delete company}              \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The company selects company to delete\\ \textbullet The system shows alert of confirmation\\ \textbullet if yes the system deletes the company\end{tabular}} \\ \hline
+
+\multicolumn{2}{|l|}{Exception Scenario: Modify company}           \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The new data are invalid\\ \textbullet An error message appears\end{tabular}}                                                      \\ \hline
+
+\multicolumn{2}{|l|}{Exception Scenario: Add company}           \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The new data are invalid\\ \textbullet An error message appears\end{tabular}}                                                      \\ \hline
+
+\multicolumn{2}{|l|}{Exception Scenario: Delete company}           \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The use refuse to delete\\ \textbullet The system backs to the explore page\end{tabular}}                                                      \\ \hline
+\end{tabular}
+\caption{Use Case: Manage Company}
+\label{tab:managecompanytable}
+\end{table}
+
+%next one%
+\pagebreak
+\subsubsection{Manage Worker}
+The figure (\ref{fig:ManageWorker}) below clarifies Manage Worker use case
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/manage workerusecase.png}
+    \caption{Use Case: Manage Worker}
+    \label{fig:ManageWorker}
+\end{figure}
+
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|c|}{Identification Summary}      \\ \hline
+Title          & Manage Worker                    \\ \hline
+Object         & Worker Management                \\ \hline
+Abstract       & The ability of managing workers  \\ \hline
+Actor          & Worker, Admin                    \\ \hline
+Preconditions  & The worker must have an account  \\ \hline
+Post Condition & The worker access to his account \\ \hline
+\multicolumn{2}{|l|}{Nominal Scenario: Modify worker}              \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The worker modifies the data\\ \textbullet The system verifies the new data\\ \textbullet The system updates the new data\end{tabular}} \\ \hline
+
+\multicolumn{2}{|l|}{Nominal Scenario: Add worker}              \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The worker enters the data\\ \textbullet The system verifies the entered data\\ \textbullet The system add the new worker\end{tabular}} \\ \hline
+
+\multicolumn{2}{|l|}{Nominal Scenario: Delete worker}              \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The worker selects worker to delete\\ \textbullet The system shows alert of confirmation\\ \textbullet if yes the system deletes the worker\end{tabular}} \\ \hline
+
+\multicolumn{2}{|l|}{Exception Scenario: Modify worker}           \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The new data are invalid\\ \textbullet An error message appears\end{tabular}}                                                      \\ \hline
+
+\multicolumn{2}{|l|}{Exception Scenario: Add worker}           \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The new data are invalid\\ \textbullet An error message appears\end{tabular}}                                                      \\ \hline
+
+\multicolumn{2}{|l|}{Exception Scenario: Delete worker}           \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The use refuse to delete\\ \textbullet The system backs to the explore page\end{tabular}}                                                      \\ \hline
+\end{tabular}
+\caption{Use Case: Manage Worker}
+\label{ManageWorker}
+\end{table}
+
+
+%Another one%
+\pagebreak
+\subsubsection{Manage Worker's Project}
+
+The figure (\ref{fig:ManageWorkerproject}) below clarifies Manage Worker's Project use case
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/manage projectusecase.png}
+    \caption{Use Case: Manage Worker's Project}
+    \label{fig:ManageWorkerproject}
+\end{figure}
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|c|}{Identification Summary}               \\ \hline
+Title          & Manage Worker's Project                   \\ \hline
+Object         & Worker's Project Management               \\ \hline
+Abstract       & The ability of managing worker's Projects \\ \hline
+Actor          & Worker, Admin                             \\ \hline
+Preconditions  & The worker must have an account           \\ \hline
+Post Condition & The worker access to his account          \\ \hline
+\multicolumn{2}{|l|}{Nominal Scenario}                      \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The worker adds a project\\ \textbullet The system verifies the new project\\ \textbullet The system added the project to database\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{Exception Scenario}                   \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The new project is invalid\\ \textbullet An error message appears\end{tabular}} \\ \hline
+\end{tabular}
+\caption{Use Case: Manage Worker's Project}
+\label{ManageWorkerProject}
+\end{table}
+
+%manage message%
+\pagebreak
+\subsubsection{Manage Message}
+
+The figure (\ref{fig:ManageMessaging}) below clarifies Manage Messaging use case
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/Messaging Managementusecase.png}
+    \caption{Use Case: Manage Message}
+    \label{fig:ManageMessaging}
+\end{figure}
+
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|c|}{Identification Summary}      \\ \hline
+Title          & Manage Message                   \\ \hline
+Object         & Message Management               \\ \hline
+Abstract       & The ability of managing messages \\ \hline
+Actor          & Users                            \\ \hline
+Preconditions  & The user must have an account    \\ \hline
+Post Condition & The user access to his account   \\ \hline
+\multicolumn{2}{|l|}{Nominal Scenario:Send a Message}             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The user writes a message\\ \textbullet The system verifies the validity of the message\\ \textbullet The system send the message\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{Exception Scenario}          \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The message is invalid(empty)\\ \textbullet An error message appears\end{tabular}} \\ \hline
+\end{tabular}
+\caption{Use Case: Manage Message}
+\label{ManageWorkerProject}
+\end{table}
+
+%Manage forum%
+\pagebreak
+\subsubsection{Manage Forum}
+
+The figure (\ref{fig:ManageForum}) below clarifies Manage Forum use case
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/manage forumusecase.png}
+    \caption{Use Case: Manage Forum}
+    \label{fig:ManageForum}
+\end{figure}
+
+\begin{table}[!htbp][]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|c|}{Identification Summary}    \\ \hline
+Title          & Manage Forum                   \\ \hline
+Object         & Forum Management               \\ \hline
+Abstract       & The ability of managing Forums \\ \hline
+Actor          & Admin,Worker,Company,Visitor   \\ \hline
+Preconditions  & The user must have an account  \\ \hline
+Post Condition & The user access to his account \\ \hline
+\multicolumn{2}{|l|}{Nominal Scenario: Add comment}           \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The user add a comment\\ \textbullet The system verifies the validity of the comment\\ \textbullet The system add the comment to the database\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{Exception Scenario}        \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The comment is invalid(empty)\\ \textbullet An error message appears\end{tabular}} \\ \hline
+\end{tabular}
+\caption{Use Case: Manage Forum}
+\label{ManageForum}
+\end{table}
+
+%Manage account%
+\pagebreak
+\subsubsection{Manage Accounts}
+The figure (\ref{fig:ManageAccounts}) below clarifies Manage Accounts use case
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/manage accountusecase.png}
+    \caption{Use Case: Manage Accounts}
+    \label{fig:ManageAccounts}
+\end{figure}
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|c|}{Identification Summary}      \\ \hline
+Title          & Manage Account                   \\ \hline
+Object         & Account Management               \\ \hline
+Abstract       & The ability of managing Accounts \\ \hline
+Actor          & Admin                            \\ \hline
+Preconditions  & The Admin must have an account   \\ \hline
+Post Condition & The Admin access to his account  \\ \hline
+\multicolumn{2}{|l|}{Nominal Scenario: Add Account}             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The Admin adds a new account\\ \textbullet The system verifies the validity of the entered data\\ \textbullet The system adds the new user to the database\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{Exception Scenario}          \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The entered data are invalid(empty)\\ \textbullet An error message appears\end{tabular}} \\ \hline
+\end{tabular}
+\caption{Use Case: Manage Account}
+\label{ManageAccount}
+\end{table}
+
+%send report %
+\pagebreak
+\subsubsection{Send a report}
+The figure (\ref{fig:SendReport}) below clarifies Send Report use case
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/send reportusecase.png}
+    \caption{Use Case: Send a report}
+    \label{fig:SendReport}
+\end{figure}
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|c|}{Identification Summary}              \\ \hline
+Title          & Send Report                              \\ \hline
+Object         & Send Report                              \\ \hline
+Abstract       & The ability of sending reports           \\ \hline
+Actor          & Users                                    \\ \hline
+Preconditions  & The user must have internet connectivity \\ \hline
+Post Condition & The user must connect to network         \\ \hline
+\multicolumn{2}{|l|}{Nominal Scenario: Send Report }                     \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The user opens the report page\\ \textbullet The user starts writing the problem\\ \textbullet The user sends the report to the admin\\ \textbullet The system verifies the validity of the report\\ \textbullet The system sends the report.\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{Exception Scenario}                  \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}\textbullet The entered report is invalid(empty)\\ \textbullet An error message appears\end{tabular}} \\ \hline
+\end{tabular}
+\caption{Use Case: Send A Report}
+\label{SendReport}
+\end{table}
+\pagebreak
+
+
+\subsection{Class diagram}
+The class diagram below clarifies the required tables, field and methods to use the app.
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=18cm, height=20cm]{pictures/Class Diagram.png}
+    \caption{Global Class Diagram}
+    \label{fig:classediagram}
+\end{figure}
+\pagebreak
+
+\subsection{Sequence diagram}
+In this section we will mention three cases of sequence diagram, authentication, add worker and send message
+\subsubsection{Sequence Diagram: Authentication}
+The figure (\ref{fig:authseqdiagram}) below clarifies authentication sequence diagram
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/authsqdiagram.png}
+    \caption{Sequence Diagram: Authentication}
+    \label{fig:authseqdiagram}
+\end{figure}
+
+\pagebreak
+\subsubsection{Sequence Diagram: Add worker}
+The figure (\ref{fig:addworkerseqdiagram}) below clarifies add worker sequence diagram
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/add worker seqdiagram.png}
+    \caption{Sequence Diagram: Add worker}
+    \label{fig:addworkerseqdiagram}
+\end{figure}
+\pagebreak
+
+\subsubsection{Sequence Diagram: Send message}
+The figure (\ref{fig:sendmsgseqdiagram}) below clarifies Send message sequence diagram
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=16cm, height=10cm]{pictures/send message sqdiagram.png}
+    \caption{Sequence Diagram: Send message}
+    \label{fig:sendmsgseqdiagram}
+\end{figure}
+
+
+
+
+\pagebreak
+
+
+
+
+
+
+
+
+\subsection{Activity Diagram}
+In this section we will mention three cases of Activity Diagram, authentication, delete company and consult worker's project
+\subsubsection{Activity Diagram: Authentication}
+The figure (\ref{fig:authseqdiagram}) below clarifies authentication Activity Diagram
+
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=20cm, height=10cm]{pictures/authactdiagram.png}
+    \caption{Activity Diagram: Authentication}
+    \label{fig:authseqdiagram}
+\end{figure}
+
+\pagebreak
+\subsubsection{Activity Diagram: Delete company}
+The figure (\ref{fig:deletecmactdiagram}) below clarifies Delete company Activity Diagram
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=20cm, height=10cm]{pictures/delete company act diagram.png}
+    \caption{Activity Diagram: Delete company}
+    \label{fig:deletecmactdiagram}
+\end{figure}
+
+\pagebreak
+
+\subsubsection{Activity Diagram: Consult worker's projects}
+The figure (\ref{fig:consultactdiagram}) below clarifies Consult worker's projects Activity Diagram
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=20cm, height=10cm]{pictures/consult actdiagram.png}
+    \caption{Activity Diagram: Consult worker's projects}
+    \label{fig:consultactdiagram}
+\end{figure}
+
+
+\section*{Conclusion}
+Pushing our platform to fit all these needs is the best way to ensure the reliability and the flexibility. Nowadays even small details can make a huge difference in the IT world.
+We really hope that all mentioned informations are clear so others can take advantage of this study.
+
+\chapter{Production}
+\renewcommand{\thesection}{\arabic{section}}
+\section*{Introduction}
+The production phase is the common one that requires more time, work and absolute patience. It's actually the phase that translates the conceptual phase to life. Therefore, we've tried to choose carefully the hardware and the software technologies, as we will describe below. 
+\section{Development environment}
+At the end of this study and the design of our application, we move on to the realization phase. This chapter presents the summary of our work carried out during this graduation project. We will also present the environment hardware and development tools used. We close this chapter with a few screenshots demonstrating the features of our application.
+\subsection{Hardware environment}
+We have made this application using 2 computers with the following characteristics:
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \hline
+      \multicolumn{2}{|c|}{Computer Characteristics} \\
+        \hline
+        \hline
+    
+        Equipment &  Characteristics \\ \hline
+        Laptop &  Dell \\ \hline
+        CPU &  Intel Celeron N4000 \\ \hline
+        CPU Frequency &  @1.10GHz \\ \hline
+        RAM &  4.00GB \\ \hline
+        OS &  Windows 10 Pro 64-bit \\ \hline
+        
+    \end{tabular}
+    \caption{First Computer}
+    \label{tab:pc1}
+\end{table}
+
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \hline
+      \multicolumn{2}{|c|}{Computer Characteristics} \\
+        \hline
+        \hline
+    
+        Equipment &  Characteristics \\ \hline
+        Laptop &  HP Elitebook \\ \hline
+        CPU &  Intel Core I5  \\ \hline
+        CPU Frequency &  @2.6GHz \\ \hline
+        RAM &  4.00GB \\ \hline
+        OS &  Windows 10 Pro 64-bit \\ \hline
+        
+    \end{tabular}
+    \caption{Second Computer}
+    \label{tab:pc2}
+\end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \hline
+      \multicolumn{2}{|c|}{Server Characteristics} \\
+        \hline
+        \hline
+    
+        Equipment &  Characteristics \\ \hline
+        Server &  Litespeed / Plesk WebAdmin v18 \\ \hline
+        CPU &  6 vCpu  \\ \hline
+        CPU Frequency &  @3.7GHz \\ \hline
+        RAM &  16.00GB \\ \hline
+        OS &  Ubuntu v20 \\ \hline
+        Link Speed &  800mbit/s \\ \hline
+        ROM &  400 GB \\ \hline
+        
+    \end{tabular}
+    \caption{Server}
+    \label{tab:server}
+\end{table}
+
+
+
+\pagebreak
+
+\subsection{Software environment}
+
+\subsection{Laravel}
+Laravel is a free, open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony~\cite{laravel}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/laravel.png}
+    \caption{Laravel Logo}
+    \label{fig:laravel}
+\end{figure}
+
+
+\subsection{StarUML}
+StarUML. A sophisticated software modeler for agile and concise modeling~\cite{wong2007staruml}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/staruml.png}
+    \caption{StarUML Logo}
+    \label{fig:staruml}
+\end{figure}
+
+\pagebreak
+\subsection{PHP}
+PHP is a general-purpose scripting language especially suited to web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1994. The PHP reference implementation is now produced by The PHP Group. PHP originally stood for Personal Home Page, but it now stands for the recursive initialism PHP: Hypertext Preprocessor~\cite{welling2003php}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=6cm, height=3cm]{pictures/php.png}
+    \caption{PHP Logo}
+    \label{fig:php}
+\end{figure}
+
+
+
+\subsection{LiteSpeedServer}
+LiteSpeed Web Server (LSWS), is a proprietary web server software. It is the 4th most popular web server, estimated to be used by 8.1 \% of websites as of December 2020. LSWS is developed by privately held LiteSpeed Technologies. The software uses the same configuration format as Apache HTTP Server and is compatible with most Apache features. An open source variant is also available.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/litespeed.png}
+    \caption{LiteSpeed Server Logo}
+    \label{fig:litespeed}
+\end{figure}
+\subsection{Bootsrap}
+Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components~\cite{hesterberg2011bootstrap}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/bootstrap.png}
+    \caption{Bootstrap Logo}
+    \label{fig:bootstrap}
+\end{figure}
+
+\subsection{Github}
+GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, continuous integration and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018~\cite{github}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/github.png}
+    \caption{Github Logo}
+    \label{fig:github}
+\end{figure}
+
+\subsection{Twig}
+Twig is a template engine for the PHP programming language. Its syntax originates from Jinja and Django templates. It's an open source product licensed under a BSD License and maintained by Fabien Potencier. The initial version was created by Armin Ronacher. Symfony PHP framework comes with a bundled support for Twig as its default template engine since version 2.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/twig-logo.png}
+    \caption{Twig Logo}
+    \label{fig:twig}
+\end{figure}
+
+\subsection{JavaScript}
+JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions~\cite{crockford2008javascript}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/javascript.png}
+    \caption{JavaScript Logo}
+    \label{fig:javascript}
+\end{figure}
+\subsection{HTML}
+The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript~\cite{raggett1999html}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/html.png}
+    \caption{HTML Logo}
+    \label{fig:html}
+\end{figure}
+\pagebreak
+\subsection{CSS}
+Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript~\cite{css}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/css.png}
+    \caption{CSS Logo}
+    \label{fig:css}
+\end{figure}
+\subsection{JQuery}
+jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License. As of May 2019, jQuery is used by 73 \% of the 10 million most popular websites~\cite{jquery}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/jquery.png}
+    \caption{JQuery Logo}
+    \label{fig:jquery}
+\end{figure}
+\pagebreak
+\subsection{Apache}
+The Apache HTTP Server, colloquially called Apache, is a free and open-source cross-platform web server software, released under the terms of Apache License 2.0. Apache is developed and maintained by an open community of developers under the auspices of the Apache Software Foundation
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/apache.png}
+    \caption{Apache Logo}
+    \label{fig:apache}
+\end{figure}
+\subsection{Dart}
+Dart is a programming language designed for client development, such as for the web and mobile apps. It is developed by Google and can also be used to build server and desktop applications. Dart is an object-oriented, class-based, garbage-collected language with C-style syntax~\cite{dart}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/dart.png}
+    \caption{Dart Logo}
+    \label{fig:dart}
+\end{figure}
+\pagebreak
+\subsection{Flutter}
+Flutter is an open-source UI software development kit created by Google. It is used to develop cross platform applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase. The first version of Flutter was known as codename "Sky" and ran on the Android operating system~\cite{flutter}.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[width=3cm, height=3cm]{pictures/flutter.png}
+    \caption{Flutter Logo}
+    \label{fig:flutter}
+\end{figure}
+\pagebreak
+\setcounter{secnumdepth}{3}
+\section{Project implementation}
+\subsection{Web Part}
+\subsubsection{Welcome Screen}
+The frontend was built with CSS and HTML.It contains such as documentation about the activity of the website with various of animations
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/1 home.PNG}
+    \caption{Introduction Screen 1}
+    \label{fig:1}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/2 home.PNG}
+    \caption{Introduction Screen 2}
+    \label{fig:2}
+\end{figure}
+\pagebreak
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/3 home.PNG}
+    \caption{Introduction Screen 3}
+    \label{fig:3}
+\end{figure}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/4 home.PNG}
+    \caption{Introduction Screen 4}
+    \label{fig:4}
+\end{figure}
+\pagebreak
+The contact form sends an email to admins directly and informs admin in the administration control panel. 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/5 home.PNG}
+    \caption{Introduction Screen 5}
+    \label{fig:5}
+\end{figure}
+
+
+
+
+
+
+
+\pagebreak
+
+\subsubsection{Service Provider Register interface}
+The name/surname fields accept only text, with a maximum length of 40 characters.
+The email field accepts only "exemple@exp.com" format.
+The name field accepts 35 characters as maximum.
+The phone number must be 8 in length and start with 9(TT) OR 7(LINE) OR 5(ORANGE) OR 4(LAYCA) OR 3(ORANGE FIXBOX) OR 2(OOREDOO). 
+The Bio field accepts max length 250 characters.
+The email field accepts only "exemple@exp.com" formats.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/9 register.PNG}
+    \caption{Service Provider Register interface 1}
+    \label{fig:6}
+\end{figure}
+
+The price field only accepts numbers with 99999 maximal length.
+The password must be greater than eight characters due to security reasons.
+The user "must" agree to terms and conditions and privacy policy.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/10 register.PNG}
+    \caption{Service Provider Register interface 2}
+    \label{fig:7}
+\end{figure}
+\pagebreak
+\subsubsection{Client Register interface}
+The name field accepts 35 characters as maximum.
+The email field accepts only "exemple@exp.com" formats.
+The password must be greater than eight characters due to security reasons.
+The user "must" agree to terms and conditions and privacy policy.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/8 register.PNG}
+    \caption{Client Register interface}
+    \label{fig:8}
+\end{figure}
+\pagebreak
+\subsubsection{Company Register interface}
+The company name field accepts 35 characters as maximum.
+The phone number must be 8 in length and start with 9(TT) OR 7(LINE) OR 5(ORANGE) OR 4(LAYCA) OR 3(ORANGE FIXBOX) OR 2(OOREDOO). 
+The Bio field accepts max length 250 characters.
+The email field accepts only "exemple@exp.com" formats.
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/6 register.PNG}
+    \caption{Company Register interface interface 1}
+    \label{fig:9}
+\end{figure}
+
+The price field only accepts numbers with 99999 maximal length.
+The password must be greater than eight characters due to security reasons.
+The user "must" agree to terms and conditions and privacy policy.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/7 register.PNG}
+    \caption{Company Register interface interface 2}
+    \label{fig:10}
+\end{figure}
+\pagebreak
+\subsubsection{Authentication interface}
+The email field accepts only "exemple@exp.com" formats.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/11 login.PNG}
+    \caption{Authentication interface}
+    \label{fig:11}
+\end{figure}
+
+
+\subsubsection{Forget password interface}
+The email field accepts only "exemple@exp.com" formats.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/12 forgot pass.PNG}
+    \caption{Forget password interface}
+    \label{fig:12}
+\end{figure}
+\pagebreak
+\subsubsection{Password recovery link sent interface}
+A confirmation text will appear to let user know that an email was sent to his/her email address. 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/13 forgot pass.PNG}
+    \caption{Password recovery link sent interface}
+    \label{fig:13}
+\end{figure}
+\subsubsection{Password recovery email interface}
+A simple email, shows the subject and gives a link to the user so he/she can update his/her password.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/14 forgot pass.PNG}
+    \caption{Password recovery email interface}
+    \label{fig:14}
+\end{figure}
+
+
+
+
+\pagebreak
+
+\subsubsection{Add Post}
+This interface is where the user can add a post. It contains 4 fields (only 3 fillable).\newline
+Post title: which means the title of the post\newline
+Post writer: the author of the post(unfillable)\newline
+section: To whom the post will be added\newline
+main post: This is the plain text with the various options of writing a post(Bold, Italic, centering...)\newline
+for sure the fields are controlled by a verification system that hinders the attempt of posting invalid posts
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/Forums add post 1.PNG}
+    \caption{Add Post 1}
+    \label{fig:14}
+\end{figure}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/Forums add post 2.PNG}
+    \caption{Add Post 2}
+    \label{fig:14}
+\end{figure}
+\pagebreak
+\subsubsection{Forum Comment}
+This interface is where the user can add a comment. It contains only 1 field controlled by the verification system.
+the comment field is where the user should write the comment and it has to be valid(unempty). 
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/Forums comment.PNG}
+    \caption{Add Comment 1}
+    \label{fig:14}
+\end{figure}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/Forums comment1.PNG}
+    \caption{Add Comment 2}
+    \label{fig:14}
+\end{figure}
+\pagebreak
+\subsubsection{Forum No Post}
+If there is no posts yet this interface will appear to the user
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/Forums no posts.PNG}
+    \caption{No Post}
+    \label{fig:14}
+\end{figure}
+\pagebreak
+\subsubsection{Forum Post Content}
+This is the post body. It contains some components such as the title of the post, date, author and the main post
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/Forums post content.PNG}
+    \caption{Forum Post Content}
+    \label{fig:14}
+\end{figure}
+\subsubsection{Forum With Posts}
+This interface contains the list of posts fetched from the database. In each single post there is a button called "Read More". The click on this button will redirect the user to the page above in order to complete reading and consult the body of the post
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/Forums with posts.PNG}
+    \caption{Forum With Posts}
+    \label{fig:14}
+\end{figure}
+\subsubsection{Messaging}
+These interfaces are similar to the mobile interfaces below. Here the user will chat with the service provider in a beautiful popup window as shown below.
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/Message 1.png}
+    \caption{Messageing 1}
+    \label{fig:14}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/msg.PNG}
+    \caption{Messageing 2}
+    \label{fig:14}
+\end{figure}
+\pagebreak
+
+
+
+\subsubsection{Edit Profile}
+In this section, the user is able to edit his profile. A lot of information are changeable. Besides the basic information(Name,lastname,email,password...) he can change availability, price, unit price if he is a worker...
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/cptr Modify Profile 1.PNG}
+    \caption{Modify Profile 1}
+    \label{fig:15}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/cptr Modify Profile 2.PNG}
+    \caption{Modify Profile 2}
+    \label{fig:16}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/cptr Modify Profile 3.PNG}
+    \caption{Modify Profile 3}
+    \label{fig:17}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/cptr Modify Profile 4.PNG}
+    \caption{Modify Profile 4}
+    \label{fig:18}
+\end{figure}
+\pagebreak
+\subsubsection{Explore workers}
+Here the user can explore and consult all the workers and the companies listed in a beautiful gridview with two buttons the first one is to open worker's account the second one is the start chatting with the worker but if the selected worker is same current user's account the two buttons become View My Profile to open the current user's profile and Edit My Profile to edit it.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/findaworker.PNG}
+    \caption{Explore workers}
+    \label{fig:19}
+\end{figure}
+
+\pagebreak
+\subsubsection{Consult Worker Profile}
+Here is the main profile of the worker. A lot of information show here such as full name, rating, speciality...with ability to rate the worker.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/cptr user profile 1.PNG}
+    \caption{User Profile 1}
+    \label{fig:19}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[ height=8cm]{pictures/cptr user profile 2.PNG}
+    \caption{User Profile 2}
+    \label{fig:20}
+\end{figure}
+
+
+
+
+
+%******************************************
+\subsection{Mobile Part}
+\subsubsection{Introduction Screens}
+Simple and powerful way to introduce the app.
+Contains all functionalities to let users understands the app
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=15cm]{pictures/intro.png}
+    \caption{Welcome Screens}
+    \label{fig:intro}
+\end{figure}
+\pagebreak
+\subsubsection{Welcome Interface}
+Four buttons:The first one with messages icon, let user/guest report an abuse.
+Explore as a guest .
+Register takes the user to register interface, and login take the user to login interface
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/welcome.png}
+    \caption{Welcome Interface}
+    \label{fig:welcome}
+\end{figure}
+
+\subsubsection{Guest Explore Interface}
+Explore as a guest: with limitations (chat/phone/ other information).
+Limitations make users register to enjoy all other functionalities.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/guest explore 2.png}
+    \caption{Guest Explore Interface}
+    \label{fig:guest_explore_interface}
+\end{figure}
+
+%************************************
+\pagebreak
+\subsubsection{Authentication Interface (register)}
+The First name field accepts 35 characters as maximum.
+The Last name field accepts 35 characters as maximum.
+The email field accepts only "exemple@exp.com" formats.
+The password must be greater than eight characters due to security reasons.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/register.png}
+    \caption{Authentication Interface (register)}
+    \label{fig:register}
+\end{figure}
+\pagebreak
+%************************************
+\subsubsection{Worker Registration Interface}
+The avatar icon is clickable, so a user can upload his/her own photo.
+The phone number must be 8 in length and start with 9(TT) OR 7(LINE) OR 5(ORANGE) OR 4(LAYCA) OR 3(ORANGE FIXBOX) OR 2(OOREDOO). 
+The amount field only accepts numbers with 99999 maximal length.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/worker registert.png}
+    \caption{Worker Registration Interface}
+    \label{fig:worker_register}
+\end{figure}
+\pagebreak
+%************************************
+\subsubsection{Company Registration Interface}
+The avatar icon is clickable, so a user can upload his/her own photo.
+The phone number must be 8 in length and start with 9(TT) OR 7(LINE) OR 5(ORANGE) OR 4(LAYCA) OR 3(ORANGE FIXBOX) OR 2(OOREDOO). 
+The number of worked projects field only accepts numbers.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/chef register.png}
+    \caption{Company Registration Interface}
+    \label{fig:chef_register}
+\end{figure}
+\pagebreak
+%****************************************
+\subsubsection{Authentication Interface (login)}
+The email field accepts only "exemple@exp.com" formats.
+The password field as described above (on register screen).
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/login.png}
+    \caption{Authentication Interface (login)}
+    \label{fig:login}
+\end{figure}
+%****************************************
+\pagebreak
+\subsubsection{Personal Profile Interface}
+A Logout icon
+The "PEN" icon redirects to edit profile interface.
+Profile picture.
+Full Name.
+Category of worker/company.
+Rating: 0 to 5 stars.
+Availability: Green 'yes' / Red 'No'.
+Bio Paragraph.
+All these data can be updated via "EDIT PROFILE" interface (as described below). 
+Bio Paragraph.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/main profile.png}
+    \caption{Personal Profile Interface}
+    \label{fig:personal_profile}
+\end{figure}
+\pagebreak
+%****************************************
+\subsubsection{Edit Profile Interface}
+Here users can update all profile information (that will be shown on "PERSONAL PROFILE" interface - as described above).
+All fields' data are described on the   "PERSONAL PROFILE" interface above.   
+More settings redirect to the advanced profile settings interface.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/edit profile.png}
+    \caption{Edit Profile Interface}
+    \label{fig:edit_profile}
+\end{figure}
+%****************************************
+\pagebreak
+\subsubsection{More Settings Interface}
+Here users can : 
+-Delete their account.
+-Report a bug or problem during the experience.
+- Change their status from "client" to service provider (worker).
+- Back button redirect to the previous interface
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/more settings.png}
+    \caption{More Settings Interface}
+    \label{fig:more_settings_interface}
+\end{figure}
+%****************************************
+\pagebreak
+\subsubsection{Chat Interface}
+Picture of the user.
+Name of the user.
+A simple and effective UI/UX that identifies discussions.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/chat.png}
+    \caption{Chat Interface}
+    \label{fig:chat_interface}
+\end{figure}
+%****************************************
+\pagebreak
+\subsubsection{Discussion Interface}
+Picture and full name of the user.
+A simple and effective UI/UX  that identifies  messages.
+Red and gray colors to see the difference of massages.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/descusion.png}
+    \caption{Discussion Interface}
+    \label{fig:discussion_interface}
+\end{figure}
+\pagebreak
+%****************************************
+\subsubsection{Search Interface}
+Two buttons : 
+
+- Search by email button (make it easy to users to directly search the wanted worker or company)
+
+- Filtered search button: takes users to the " Filtered search " interface.
+
+
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/search.png}
+    \caption{Search Interface}
+    \label{fig:search}
+\end{figure}
+%****************************************
+\pagebreak
+\subsubsection{Advanced Search Interface}
+Filtered search. This feature allows the user to dig deeper in searching for a suitable worker. As clarified below there are a lot of parameters to set such as specialty, price range (minimum and maximum), unit (per day/per hour),  sex...
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/advanced search.png}
+    \caption{Advanced Search Interface}
+    \label{fig:advanced_search}
+\end{figure}
+%****************************************
+\pagebreak
+\subsubsection{Explore Workers Interface}
+Here logged in users can see all information about workers/companies.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=7.5cm]{pictures/explore workers.png}
+    \caption{Explore Workers Interface}
+    \label{fig:explore_workers}
+\end{figure}
+%****************************************
+\pagebreak
+\subsubsection{Explore Posts Interface}
+Users can post on the forum to discuss a problem or to share knowledge.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/explore posts.png}
+    \caption{Explore Posts Interface}
+    \label{fig:explore_posts}
+\end{figure}
+%****************************************
+\subsubsection{Add Post Interface}
+Here users can add only text posts.
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/add post.png}
+    \caption{Add Post Interface}
+    \label{fig:addposts_interface}
+\end{figure}
+%****************************************
+\pagebreak
+\subsubsection{Explore My Posts Interface}
+Here user can consult all his posts
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/my posts.png}
+    \caption{Explore My Posts Interface}
+    \label{fig:myposts_interface}
+\end{figure}
+\pagebreak
+\subsubsection{Locate A Worker Interface}
+Here is an effective way to let the worker and the clients get a meeting
+\begin{figure}[!htbp]
+
+        \centering
+    \includegraphics[height=9cm]{pictures/locate.png}
+    \caption{Locate A Worker Interface}
+    \label{fig:locate_interface}
+\end{figure}
+\pagebreak
+\section*{Conclusion}
+Working with many environments, platforms and software for the first time, is really a huge competition for us. We've been learning, training and practicing at the same time. Yes, maybe there are many things to be done better than what it is now, but time and pressure lead us to make a decision about what we've used.
+
+\chapter*{General Conclusion}
+Summing up, along this journey we've created an amazing application that reduces the impact of covid19 on people suffering from unemployment. Especially daily wage workers.
+We've included all the functionalities they need to create a connection between them and clients, all online.
+Therefore the opportunity door was opened to them so they can profit from the internet.
+
+Further than that, and with the help of our academic and professional supervisors. We've created a UML concept that translates our idea into a theoretical project.
+Learning and practicing at the same time is the key that drives us to succeed in the coding part. We used the latest technologies in this application that's why we're seeing it as an important achievement.
+
+"All systems have a failure" well, this is known in the development world. So that's why we've tried to make a well coded system.
+Unfortunately, there are many other missed features, and some logical fails. Firebase is a paid platform (with a free trial) So there are few functionalities and more limitations.
+
+Soon, this application will be available to all the people, of course after adding many other functionalities, and fixing bugs. This is our first project and we will do it very well!
+\bibliographystyle{plain}
+\bibliography{bibliography.bib}
+
+
+\end{document}
